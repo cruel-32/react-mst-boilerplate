@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 import { getSnapshot, onSnapshot, onPatch } from 'mobx-state-tree';
 import { reaction } from 'mobx';
-import { CartItem, Cart } from './index';
+import { CartItem, Cart } from '@/stores/Cart';
 
 it('should create a model instance', () => {
   const item = CartItem.create({

@@ -5,10 +5,8 @@ import CssBaseline from '@/components/atoms/CssBaseline';
 import logo from '@/logo.svg';
 import '@/App.css';
 import theme from '@/theme';
-import { connectReduxDevtools } from 'mst-middlewares';
 import { rootStore, Provider } from '@/stores';
-
-connectReduxDevtools(require('remotedev'), rootStore);
+import TestComponent from '@/components/test.component';
 
 const App = () => (
   <Provider value={rootStore}>
@@ -41,7 +39,7 @@ const App = () => (
               <div>about page</div>
             </Route>
             <Route path="/cart">
-              <div>cart page</div>
+              <TestComponent />
             </Route>
           </Switch>
         </div>

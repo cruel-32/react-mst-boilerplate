@@ -40,6 +40,7 @@ export const Cart = types
       self.items.push(cartItem);
     },
     remove(item: SnapshotIn<typeof CartItem>) {
+      console.log('remove -> item', item);
       destroy(item);
     },
   }))
